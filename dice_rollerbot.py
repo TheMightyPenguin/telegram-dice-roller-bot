@@ -16,13 +16,14 @@ def clamp(n, minimum, maximum):
 	return max(minimum, min(maximum, n))
 
 def handle(msg):
-	chat_id = msg['chat']['id']
+	print msg
+	# chat_id = msg['chat']['id']
 	command = msg['text']
 
 	print '----------------------'
 	print "Got Message: ", command
-	print telepot.glance(msg)
-	# print msg['chat']
+	content_type, chat_type, chat_id = telepot.glance(msg)
+	print (content_type, chat_type, chat_id)
 
 	try:
 		if command == '/roll':
