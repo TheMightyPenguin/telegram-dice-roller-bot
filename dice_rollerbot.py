@@ -19,10 +19,10 @@ def handle(msg):
 	chat_id = msg['chat']['id']
 	command = msg['text']
 
-	print '------------'
+	print '----------------------'
 	print "Got Message: ", command
 	print telepot.glance(msg)
-	print msg['chat']
+	# print msg['chat']
 
 	try:
 		if command == '/roll':
@@ -47,7 +47,6 @@ def handle(msg):
 		bot.sendMessage(chat_id, 'Instruccion no reconocida')
 
 if __name__ == '__main__':
-	print 'hola'
 	bot = telepot.Bot('165751672:AAHfTHCFjXUc13yE_DrZMdBAyy1drusSfC4')
 	bot.message_loop(handle)
 	print 'Listening ...'
