@@ -49,7 +49,7 @@ def handle(msg):
 if __name__ == '__main__':
 	print 'hola'
 	bot = telepot.Bot('165751672:AAHfTHCFjXUc13yE_DrZMdBAyy1drusSfC4')
-	bot.notifyOnMessage(handle)
+	bot.message_loop(handle)
 	print 'Listening ...'
 
 	variables = {}
